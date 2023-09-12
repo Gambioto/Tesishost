@@ -1,0 +1,156 @@
+.user {
+    text-align: right;
+    margin-bottom: 10px;
+    background-color:#61BEE0;
+    padding-right: 3%;
+    border-radius: 0px 16px 16px 16px;
+    border-radius: 16px 16px 0px 16px;
+}
+
+/* Block */
+
+
+
+.chat{
+    background-color: #475A61;
+    border-radius: 16px;
+    padding-bottom: 15px;
+}
+
+.ai {
+    margin-bottom: 10px;
+    text-align: left;
+    padding-left: 3%;
+    background: #4B93AD;
+    box-shadow: 10px 10px 25px rgba(101, 18, 135, 0.1), 15px 15px 35px rgba(101, 18, 135, 0.05), 10px 10px 50px rgba(101, 18, 135, 0.1);
+    border-radius: 0px 16px 16px 16px;
+}
+
+/* 2 columnas */
+.column {
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+/* estilos  columna izq*/
+.left-column h1, .dropright {
+    padding-bottom: 4%;
+}
+
+.left-column h3 {
+    padding-bottom: 1%;
+}
+
+.button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    width: 5%;
+    font-size: 30px;
+}
+
+.input {
+    width: 93%;
+}
+
+.left-column .input-group {
+    padding-top: 2%;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.container.container-sm {
+    max-width: 782px;
+}
+
+.p-1 {
+    padding: 1rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.border-5 {
+    border-radius: 5px;
+}
+
+.title {
+    font-size: 2.75rem;
+    font-weight: 500;
+    margin: 3rem 0;
+}
+
+.form {
+    border-radius: 16px;
+    background-color: #7e9ba5;
+    padding-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-label {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.select {
+    width: 250px;
+    text-align: center;
+}
+
+#form-select {
+    margin-left: 15px;
+    width: 95%;
+}
+
+#form-input {
+    margin-left: 15px;
+    margin-bottom: 15px;
+    width: 95%;
+    
+}
+
+#form-button {
+    margin-left: 85%;
+}
+.form-group input,
+.form-group select {
+    border: 1px solid rgba(238, 238, 238, 0.9333333333);
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+
+.text-center {
+    text-align: center;
+    font-size: 26px;
+}
+
+.shadow-sm {
+    box-shadow: 0 2px 8px 3px rgba(0, 0, 0, 0.15);
+}
+
+.bg-darkGreen {
+    background-color: rgb(36, 59, 36);
+}
+
+.text-color{
+    color:#e6e6e6;
+}
+
+.text-light {
+    color: #393a3a;
+}
