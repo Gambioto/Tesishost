@@ -3,7 +3,7 @@ import axios from "axios";
 import Spinner from 'react-bootstrap/Spinner';
 import {IoIosArrowForward} from 'react-icons/io'
 import './styles.css'
-import { Col, Container, Form, Row } from "react-bootstrap";
+import { Button, Col, Container, Form, Row } from "react-bootstrap";
 
 
 export default function ChatGPT(props) {
@@ -12,11 +12,21 @@ export default function ChatGPT(props) {
   const [messages, setMessages] = useState([]);
   const [isTyping, setIsTyping]  = useState(false);
 
+  let loading = false;
+
   const HTTP = "http://localhost:8080/chat";
   
   useEffect(() =>{
     sendDirectMessage();
   } ,[directPrompt])
+
+  const handleLoading = () => {
+    setIsTyping(true)
+  }
+
+  const stopLoading = () => {
+    setIsTyping(false)
+  }
 
   const sendDirectMessage = async () =>{
     console.log(directPrompt)
@@ -37,13 +47,13 @@ export default function ChatGPT(props) {
         max_tokens: 50,
         temperature: 0.7,
       }
+      )
       .then(
         setIsTyping(true),
         setInput('')
       )
-      )
       .finally(
-        setIsTyping(true)
+        stopLoading()
       )
       ;
 
@@ -63,7 +73,6 @@ export default function ChatGPT(props) {
 
   const sendMessage = async (e) => {
     e.preventDefault()
-    setIsTyping(true)
     if (input.trim() === '') return;
     // Guardar el mensaje enviado por el usuario
     const userMessage = {
@@ -82,10 +91,10 @@ export default function ChatGPT(props) {
       )
       .then(
         setInput(''),
-        console.log(isTyping)
+        console.log(isTyping),
       )
       .finally(
-        setIsTyping(false)
+        stopLoading()
       )
       ;
 
@@ -136,7 +145,7 @@ export default function ChatGPT(props) {
           className="input"
           onChange={e => setInput(e.target.value)}
           />
-          <button className="button" onClick={sendMessage}><IoIosArrowForward/></button>
+          <button className="button" onClick={(event) => { sendMessage(event); handleLoading();}}><IoIosArrowForward/></button>
         </form>
         }
         </Col>

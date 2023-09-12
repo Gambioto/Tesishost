@@ -6,9 +6,10 @@ import Marketing from './Marketing';
 import Objective from './Objective';
 import Solutions from './Solutions';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Routes,
   Route,
+  Link
 } from "react-router-dom";
 
 export default function Navigation() {
@@ -20,10 +21,26 @@ export default function Navigation() {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="/">Chat</Nav.Link>
-              <Nav.Link href="/objetivo">Objetivo</Nav.Link>
-              <Nav.Link href="/marketing">Marketing</Nav.Link>
-              <Nav.Link href="/soluciones">Soluciones</Nav.Link>
+              <Nav.Link>
+                <Link to={"/"}>
+                  Chat
+                </Link>
+              </Nav.Link>
+              <Nav.Link>
+                <Link to={"/objetivo"}>
+                  Objetivo
+                </Link>
+              </Nav.Link>
+              <Nav.Link >
+                <Link to={"/marketing"}>
+                  Marketing
+                </Link>
+              </Nav.Link>
+              <Nav.Link>
+                <Link to={"/soluciones"}>
+                  Soluciones
+                </Link>
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
