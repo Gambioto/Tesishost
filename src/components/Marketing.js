@@ -62,7 +62,6 @@ export default function Marketing () {
             <Row>
                 <Col>
                     <Form onSubmit={handleSubmit} className='form'>
-
                         <Form.Group>
                             <Form.Label>Giro del negocio</Form.Label>
                             <Form.Select onChange={handleBusinessChange} id='form-select'>

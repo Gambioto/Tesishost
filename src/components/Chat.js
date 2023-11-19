@@ -14,7 +14,7 @@ export default function ChatGPT(props) {
 
   let loading = false;
 
-  const HTTP = "http://localhost:8080/chat";
+  const HTTP = "https://app-prueba-yye7.onrender.com/chat";
   
   useEffect(() =>{
     sendDirectMessage();
@@ -53,7 +53,7 @@ export default function ChatGPT(props) {
         setInput('')
       )
       .finally(
-        stopLoading()
+        stopLoading
       )
       ;
 
@@ -94,7 +94,7 @@ export default function ChatGPT(props) {
         console.log(isTyping),
       )
       .finally(
-        stopLoading()
+        stopLoading
       )
       ;
 

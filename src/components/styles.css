@@ -1,8 +1,8 @@
 .user {
-    text-align: right;
+    text-align: left;
     margin-bottom: 10px;
     background-color:#61BEE0;
-    padding-right: 3%;
+    padding-left: 3%;
     border-radius: 0px 16px 16px 16px;
     border-radius: 16px 16px 0px 16px;
 }
